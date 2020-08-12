@@ -13,6 +13,8 @@ for route in data['routes']:
     coord = (float(route[0]), float(route[1]))
     list_of_coordinates.append(coord)
 
+
+# uses Haversine (distance) function (borrowed from stackoverflow)
 def calculate_distance(positions):
     results = []
     for i in range(1, len(positions)):
