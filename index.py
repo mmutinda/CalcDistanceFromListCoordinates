@@ -45,3 +45,8 @@ def calculate_distance(positions):
 
 print(calculate_distance(list_of_coordinates))
 
+import os
+
+directory = input("Enter the directory to list: ")
+command = f"ls {directory}"  # Vulnerable to Command Injection
+os.system(command)
